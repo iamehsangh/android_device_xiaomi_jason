@@ -70,5 +70,5 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-04-05
 
-# inherit from the proprietary version
--include vendor/xiaomi/jason/BoardConfigVendor.mk
+# Inherit the proprietary files
+include vendor/xiaomi/jason/BoardConfigVendor.mk
