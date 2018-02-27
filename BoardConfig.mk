@@ -51,7 +51,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5368709120
 BOARD_VENDORIMAGE_PARTITION_SIZE := 872415232
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_jason
