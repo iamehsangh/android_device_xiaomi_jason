@@ -7,3 +7,5 @@ allow hal_nfc_default nfc_data_file:{ file lnk_file fifo_file } create_file_perm
 
 allow hal_nfc_default nfc_vendor_data_file:dir rw_dir_perms;
 allow hal_nfc_default nfc_vendor_data_file:file create_file_perms;
+
+dontaudit hal_nfc_default nxpese_hwservice:hwservice_manager find;
