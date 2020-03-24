@@ -63,11 +63,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.spv3.enable=true \
     persist.vendor.audio.avs.afe_api_version=2
 
-# Camera
-PRODUCT_PACKAGES += \
-    camera.sdm660 \
-    libmm-qcamera
-
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.hist.high=20 \
     persist.camera.hist.drc=1.2 \

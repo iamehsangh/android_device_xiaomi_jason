@@ -32,7 +32,6 @@ TARGET_KERNEL_VERSION := 4.4
 
 # Camera
 BOARD_QTI_CAMERA_32BIT_ONLY := true
-$(call project-set-path,qcom-camera,$(DEVICE_PATH)/camera)
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
