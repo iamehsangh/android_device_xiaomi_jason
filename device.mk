@@ -26,6 +26,8 @@ $(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
 
 $(call inherit-product, vendor/xiaomi/jason/jason-vendor.mk)
 
+$(call inherit-product-if-exists, vendor/miuicamera/common/common-vendor.mk)
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
