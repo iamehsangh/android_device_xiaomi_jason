@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.lineageos.settings.devicex;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,7 +30,7 @@ public class Constants {
     public static final String BUTTON_SWAP_NODE = "/sys/touchpanel/reversed_keys";
 
     // Intents
-    public static final String CUST_INTENT = "org.lineageos.settings.device.CUST_UPDATE";
+    public static final String CUST_INTENT = "org.lineageos.settings.devicex.CUST_UPDATE";
     public static final String CUST_INTENT_EXTRA = "pocketmode_service";
 
     // Holds <preference_key> -> <proc_node> mapping

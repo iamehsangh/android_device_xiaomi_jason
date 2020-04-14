@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.lineageos.settings.devicex;
 
 import android.content.Context;
 import android.content.Intent;
