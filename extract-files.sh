@@ -34,7 +34,8 @@ DEVICE_BLOB_ROOT="$MY_DIR"/../../../vendor/"$VENDOR"/"$DEVICE"/proprietary
 sed -i 's/\x1e\x40\x9a\x99\x99\x99\x99\x99\x3b\x40\x10/\x1e\x40\x9a\x99\x99\x99\x99\x99\x3b\x40\x01/' \
     "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera_jason_s5k3p8sp_sunny.so
 
+patchelf --remove-needed libandroid.so "$DEVICE_BLOB_ROOT"/vendor/lib/libarcsoft_beauty_shot.so
+patchelf --remove-needed libandroid.so "$DEVICE_BLOB_ROOT"/vendor/lib/libFaceGrade.so
 patchelf --remove-needed libandroid.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
 patchelf --remove-needed libandroid.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmpbase.so
-patchelf --remove-needed libgui.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera_ppeiscore.so
-patchelf --remove-needed libgui.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
+patchelf --remove-needed libandroid.so "$DEVICE_BLOB_ROOT"/vendor/lib/libVDClearShot.so

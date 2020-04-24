@@ -64,21 +64,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.avs.afe_api_version=2
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.dxoaf.sc=1 \
+    persist.camera.gyro.disable=0 \
     persist.camera.hist.high=20 \
     persist.camera.hist.drc=1.2 \
+    persist.camera.stats.test=5 \
     persist.vendor.camera.expose.aux=1 \
     persist.vendor.camera.sat.enable=1 \
     persist.vendor.camera.instant.aec=1 \
     persist.vendor.camera.ae.instant.bound=20 \
     persist.vendor.camera.set.afd=4 \
+    persist.vendor.camera.dxo=1 \
+    persist.vendor.camera.HAL3.enabled=1 \
     persist.vendor.camera.feature.cac=1 \
     persist.vendor.camera.fovc.enable=1 \
     persist.vendor.dualcam.lpm.enable=1 \
-    persist.vendor.dualcam.defer.enable=1
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.vendor.dualcam.defer.enable=1 \
     vendor.camera.aux.packageblacklist=com.tencent.mm \
-    vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner,com.instagram.android
+    vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam
 
 # ConfigPanel
 PRODUCT_PACKAGES += \

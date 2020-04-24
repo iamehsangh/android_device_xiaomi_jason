@@ -11,13 +11,25 @@ vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
 
 # Camera
 vendor/bin/remosaic_daemon
+vendor/lib/hw/camera.sdm660.so
+vendor/lib/libbase64.so
+vendor/lib/libdualcameraddm.so
+vendor/lib/lib_lowlight.so
+vendor/lib/lib_lowlight_dxo.so
+vendor/lib/libarcsoft_beautyshot.so
+vendor/lib/libarcsoft_beauty_shot.so
 vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
 vendor/lib/libarcsoft_dualcam_optical_zoom.so
 vendor/lib/libarcsoft_dualcam_refocus.so
+vendor/lib/libFaceGrade.so
 vendor/lib/libflash_pmic.so
+vendor/lib/libhal_dbg.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
+vendor/lib/libmibokeh_660.so
+vendor/lib/libMiCameraHal.so
+vendor/lib/libmm-qcamera.so
 vendor/lib/libmmcamera_arcrtb_lib.so
 vendor/lib/libmmcamera_arcsoft_smoothtranstion_wrapper_lib.so
 vendor/lib/libmmcamera_dbg.so
@@ -33,6 +45,7 @@ vendor/lib/libmmcamera_hvx_add_constant.so
 vendor/lib/libmmcamera_hvx_grid_sum.so
 vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
 vendor/lib/libmmcamera_imglib.so
+vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_jason_imx386_ofilm_eeprom.so
 vendor/lib/libmmcamera_jason_imx386_ofilm.so
 vendor/lib/libmmcamera_jason_imx386_semco_eeprom.so
@@ -72,9 +85,15 @@ vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_lib.so
 vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmjpeg.so
+vendor/lib/libmmjpeg_interface.so
+vendor/lib/libmmlib2d_interface.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
+vendor/lib/libmorpho_easy_hdr.so
+vendor/lib/libmorpho_hdr_checker.so
+vendor/lib/libmorpho_video_refiner.so
 vendor/lib/libmpbase.so
+vendor/lib/libqomx_core.so
 vendor/lib/libois_jason_bu63169_ofilm.so
 vendor/lib/libois_jason_bu63169_semco.so
 vendor/lib/libqomx_jpegdec.so
@@ -83,8 +102,32 @@ vendor/lib/libqomx_jpegenc.so
 vendor/lib/libremosaic_daemon.so
 vendor/lib/libremosaiclib.so
 vendor/lib/libSonyIMX386PdafLibrary.so
+vendor/lib/libStereoRectification.so
+vendor/lib/libVDClearShot.so
+vendor/lib/libvideobokeh.so
+vendor/lib/libvideorefiner.so
+vendor/lib/libvideoutils.so
+vendor/lib/libXMFD_AgeGender.so
+vendor/lib/mibokeh_660_opencl.bin
+vendor/lib64/libbase64.so
+vendor/lib64/libdualcameraddm.so
+vendor/lib64/libmmcamera2_frame_algorithm.so
+vendor/lib64/libmmcamera2_is.so
+vendor/lib64/libmmcamera2_q3a_core.so
+vendor/lib64/libmmcamera2_stats_algorithm.so
+vendor/lib64/libmmcamera2_stats_lib.so
+vendor/lib64/libmmcamera_dbg.so
+vendor/lib64/libmmcamera_faceproc.so
+vendor/lib64/libmmcamera_faceproc2.so
+vendor/lib64/libmmcamera_tintless_algo.so
+vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
+vendor/lib64/libmpbase.so
 vendor/lib64/libremosaic_daemon.so
 vendor/lib64/libremosaiclib.so
+vendor/lib64/libSonyIMX386PdafLibrary.so
+vendor/lib64/libsysmon_cdsp_skel.so
+vendor/lib64/libvideobokeh.so
+vendor/lib64/libvideoutils.so
 
 # Camera actuators
 vendor/lib/libactuator_jason_imx386_ak7372_semco.so
@@ -243,17 +286,43 @@ vendor/lib/libchromatix_jason_s5k3p8sp_sunny_snapshot.so
 vendor/lib/libchromatix_jason_s5k3p8sp_sunny_video.so
 
 # Camera configs
+etc/device_features/jason.xml
+vendor/etc/camera/age_gender_bg
 vendor/etc/camera/camera_config.xml
+vendor/etc/camera/crown_156_128.bin		
+vendor/etc/camera/csidtg_camera.xml		
+vendor/etc/camera/csidtg_chromatix.xml		
+vendor/etc/camera/dualcamera.png		
+vendor/etc/camera/face_goodly_208_180		
+vendor/etc/camera/face_ravishing_238_224		
+vendor/etc/camera/face_splendid_274_200		
+vendor/etc/camera/female_bg.png		
+vendor/etc/camera/female_icon.png
 vendor/etc/camera/jason_imx386_ofilm_chromatix.xml
 vendor/etc/camera/jason_imx386_semco_chromatix.xml
 vendor/etc/camera/jason_s5k3m3_ofilm_chromatix.xml
 vendor/etc/camera/jason_s5k3m3_semco_chromatix.xml
 vendor/etc/camera/jason_s5k3p8sp_sunny_chromatix.xml
+vendor/etc/camera/lf_facerank_model.bin		
+vendor/etc/camera/male_bg.png		
+vendor/etc/camera/male_icon.png		
+vendor/etc/camera/Miui-Light.ttf		
+vendor/etc/camera/MIUI_Time.ttf
+vendor/etc/camera/people_gender.dat
+vendor/etc/camera/score_bg.png		
+vendor/etc/camera/score_icon.png		
+vendor/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin		
+vendor/etc/camera/watermark_font_2300_3199.dat
 
 # Camera firmware
 vendor/firmware/cpp_firmware_v1_12_0.fw
 
 # Camera OIS firmware
+vendor/lib/liboisgyro.so
+vendor/lib/libois_bu63165.so
+vendor/lib/libois_jason_bu63169_ofilm.so
+vendor/lib/libois_jason_bu63169_semco.so
+vendor/lib/libois_lc898122.so
 etc/firmware/jason_bu63169_ofilm.coeff:vendor/firmware/jason_bu63169_ofilm.coeff
 etc/firmware/jason_bu63169_ofilm.prog:vendor/firmware/jason_bu63169_ofilm.prog
 etc/firmware/jason_bu63169_semco.coeff:vendor/firmware/jason_bu63169_semco.coeff
