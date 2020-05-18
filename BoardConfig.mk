@@ -33,9 +33,6 @@ TARGET_KERNEL_CONFIG := jason_defconfig
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 $(call project-set-path,qcom-camera,$(DEVICE_PATH)/camera)
 
-# Crypto
-TARGET_HW_DISK_ENCRYPTION := true
-
 # Display
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x00002000U
 TARGET_SCREEN_DENSITY := 420
