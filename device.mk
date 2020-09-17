@@ -179,7 +179,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    libstdc++.vendor
+    android.frameworks.bufferhub@1.0.vendor
 
 # Wifi
 PRODUCT_PACKAGES += \
