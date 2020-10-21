@@ -11,6 +11,7 @@ function blob_fixup() {
         vendor/lib/hw/camera.sdm660.so)
             "${PATCHELF}" --replace-needed "libminikin.so" "libminikin-v28.so" "${2}"
             "${PATCHELF}" --remove-needed "libgui.so" "${2}"
+            sed -i "s/service.bootanim.exit/service.bootanim.zzzz/g" "${2}"
             ;;
         vendor/lib/libarcsoft_beauty_shot.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
