@@ -28,6 +28,7 @@ DEVICE_PATH := device/xiaomi/jason
 
 # Kernel
 TARGET_KERNEL_CONFIG := jason_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/jason
 TARGET_KERNEL_VERSION := 4.4
 
 # Camera
