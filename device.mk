@@ -178,10 +178,6 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
 
-# VNDK
-PRODUCT_PACKAGES += \
-    android.frameworks.bufferhub@1.0.vendor
-
 # Wifi
 PRODUCT_PACKAGES += \
     readmac
