@@ -80,7 +80,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.camera.aux.packageblacklist=com.tencent.mm \
-    vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner,com.instagram.android
+    vendor.camera.hal1.packagelist=com.intsig.camscanner
 
 # ConfigPanel
 PRODUCT_PACKAGES += \
