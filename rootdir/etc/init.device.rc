@@ -39,6 +39,9 @@ on post-fs-data
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
 
+    #Create folder of camera
+    mkdir /data/misc/camera 0770 camera camera
+
 on boot
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath

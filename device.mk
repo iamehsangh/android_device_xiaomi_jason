@@ -58,27 +58,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.spv3.enable=true \
     persist.vendor.audio.avs.afe_api_version=2
 
-# Camera
-PRODUCT_PACKAGES += \
-    camera.sdm660 \
-    libmm-qcamera
-
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.dxoaf.sc=1 \
+    persist.camera.gyro.disable=0 \
     persist.camera.hist.high=20 \
     persist.camera.hist.drc=1.2 \
+    persist.camera.stats.test=5 \
     persist.vendor.camera.expose.aux=1 \
     persist.vendor.camera.sat.enable=1 \
     persist.vendor.camera.instant.aec=1 \
     persist.vendor.camera.ae.instant.bound=20 \
     persist.vendor.camera.set.afd=4 \
+    persist.vendor.camera.dxo=1 \
+    persist.vendor.camera.HAL3.enabled=1 \
     persist.vendor.camera.feature.cac=1 \
     persist.vendor.camera.fovc.enable=1 \
     persist.vendor.dualcam.lpm.enable=1 \
-    persist.vendor.dualcam.defer.enable=1
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.vendor.dualcam.defer.enable=1 \
     vendor.camera.aux.packageblacklist=com.tencent.mm \
-    vendor.camera.hal1.packagelist=com.intsig.camscanner
+    vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam
 
 # Consumerir
 PRODUCT_PACKAGES += \
@@ -163,6 +161,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_jason
 
+# Sensorservice
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v28/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.sensorservice@1.0.so \
+    prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-core/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.sensorservice@1.0.so
+
 # Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.force_on_dc=true
@@ -176,6 +179,8 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
 
+BOARD_VNDK_RUNTIME_DISABLE := true
+
 # Wifi
 PRODUCT_PACKAGES += \
     JasonWifiOverlay \
@@ -183,3 +188,4 @@ PRODUCT_PACKAGES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/jason/jason-vendor.mk)
+$(call inherit-product-if-exists, vendor/miuicamera/common/common-vendor.mk)
