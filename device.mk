@@ -49,8 +49,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
     $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
-    $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.spkr.cal.duration=100 \
@@ -70,13 +68,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.ae.instant.bound=20 \
     persist.vendor.camera.set.afd=4 \
     persist.vendor.camera.dxo=1 \
-    persist.vendor.camera.HAL3.enabled=1 \
     persist.vendor.camera.feature.cac=1 \
     persist.vendor.camera.fovc.enable=1 \
     persist.vendor.dualcam.lpm.enable=1 \
     persist.vendor.dualcam.defer.enable=1 \
-    vendor.camera.aux.packageblacklist=com.tencent.mm \
-    vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam
 
 # Consumerir
 PRODUCT_PACKAGES += \
