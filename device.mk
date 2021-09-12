@@ -39,9 +39,6 @@ TARGET_SCREEN_WIDTH := 1080
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
-# Treble
-PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
 # Audio
 PRODUCT_PACKAGES += \
     libspkrprot
