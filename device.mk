@@ -96,6 +96,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    libpowermanager.vendor
+
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
