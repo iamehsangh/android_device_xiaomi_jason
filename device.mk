@@ -137,11 +137,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_jason
 
-# Sensorservice
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v28/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.sensorservice@1.0.so \
-    prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-core/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.sensorservice@1.0.so
-
 # Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.force_on_dc=true
@@ -154,8 +149,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
-
-BOARD_VNDK_RUNTIME_DISABLE := true
 
 # Wifi
 PRODUCT_PACKAGES += \
