@@ -23,6 +23,7 @@ function blob_fixup() {
             ;;
         vendor/lib/libminikin-v28.so)
             "${PATCHELF}" --set-soname "libminikin-v28.so" "${2}"
+            "${PATCHELF}" --replace-needed "libicuuc.so" "libicuuc-v28.so" "${2}"
             ;;
         vendor/lib/libMiCameraHal.so)
             "${PATCHELF}" --replace-needed "libicuuc.so" "libicuuc-v28.so" "${2}"
