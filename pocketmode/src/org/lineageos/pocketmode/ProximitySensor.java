@@ -46,7 +46,7 @@ public class ProximitySensor implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        boolean isNear = event.values[0] < mSensor.getMaximumRange();
+        boolean isNear = (int) event.values[0] < (int) mSensor.getMaximumRange();
         if (FileUtils.isFileWritable(FPC_PROX_NODE)) {
             FileUtils.writeLine(FPC_PROX_NODE, isNear ? "1" : "0");
         }
