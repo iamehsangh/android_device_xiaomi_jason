@@ -1,8 +1,4 @@
 allow hal_camera_default remosaic_daemon_service:service_manager find;
-
-get_prop(hal_camera_default, default_prop)
-set_prop(hal_camera_default, default_prop)
-
 binder_call(hal_camera_default, remosaic_daemon)
 typeattribute hal_camera_default vendor_executes_system_violators;
 allow hal_camera_default system_file:file r_file_perms;
