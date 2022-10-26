@@ -112,9 +112,7 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
-    NfcNci \
     nqnfcinfo \
-    SecureElement \
     Tag
 
 PRODUCT_COPY_FILES += \
