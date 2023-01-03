@@ -46,6 +46,9 @@ function blob_fixup() {
         vendor/lib/libVDClearShot.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             ;;
+        vendor/lib64/libgf_hal.so)
+            "${PATCHELF}" --remove-needed "libpowermanager.so" "${2}"
+            ;;
     esac
 }
 
