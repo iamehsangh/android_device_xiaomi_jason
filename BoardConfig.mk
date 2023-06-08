@@ -28,7 +28,6 @@ DEVICE_PATH := device/xiaomi/jason
 
 # Kernel
 TARGET_KERNEL_CONFIG := jason_defconfig
-TARGET_KERNEL_VERSION := 4.4
 
 # Camera
 BOARD_QTI_CAMERA_32BIT_ONLY := true
