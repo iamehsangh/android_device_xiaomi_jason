@@ -327,9 +327,6 @@ vendor/lib64/hw/gatekeeper.sdm660.so
 vendor/lib/hw/keystore.sdm660.so
 vendor/lib64/hw/keystore.sdm660.so
 
-# NFC
-vendor/bin/nqnfcinfo
-
 # NFC firmware
 vendor/lib/libpn553_fw.so
 
