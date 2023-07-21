@@ -49,47 +49,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.audio.spkr.cal.duration=100 \
-    persist.vendor.audio.speaker.prot.enable=true \
-    persist.vendor.audio.spv3.enable=true \
-    persist.vendor.audio.avs.afe_api_version=2
-
 # Camera
 PRODUCT_PACKAGES += \
     camera.sdm660 \
     libmm-qcamera
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.hist.high=20 \
-    persist.camera.hist.drc=1.2 \
-    persist.vendor.camera.expose.aux=1 \
-    persist.vendor.camera.sat.enable=1 \
-    persist.vendor.camera.instant.aec=1 \
-    persist.vendor.camera.ae.instant.bound=20 \
-    persist.vendor.camera.set.afd=4 \
-    persist.vendor.camera.feature.cac=1 \
-    persist.vendor.camera.fovc.enable=1 \
-    persist.vendor.dualcam.lpm.enable=1 \
-    persist.vendor.dualcam.defer.enable=1
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    vendor.camera.aux.packageblacklist=com.tencent.mm \
-    vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner,com.instagram.android
-
 # Consumerir
 BOARD_HAVE_IR := true
-
-# Display
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.display.ad=1 \
-    ro.vendor.display.ad.sdr_calib_data=/system/vendor/etc/sdr_config.cfg \
-    ro.vendor.display.ad.hdr_calib_data=/system/vendor/etc/hdr_config.cfg \
-    ro.vendor.display.sensortype=2
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/keylayout/synaptics_dsx.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics_dsx.kl
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -99,6 +65,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
+
+# Input
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/synaptics_dsx.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics_dsx.kl
 
 # Keymaster HAL
 PRODUCT_PACKAGES += \
@@ -144,10 +115,6 @@ PRODUCT_PACKAGES += \
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 25
-
-# Telephony
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.radio.force_on_dc=true
 
 # USB
 PRODUCT_PACKAGES += \
