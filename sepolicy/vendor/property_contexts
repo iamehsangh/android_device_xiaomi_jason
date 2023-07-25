@@ -1,4 +1,5 @@
 # Camera
+camera.IMX386.actuator.update       u:object_r:camera_prop:s0
 persist.camera.dxoaf.sc             u:object_r:camera_prop:s0
 persist.camera.module.info          u:object_r:camera_prop:s0
 
