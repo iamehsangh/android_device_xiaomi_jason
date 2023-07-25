@@ -52,10 +52,6 @@ PRODUCT_COPY_FILES += \
 # Consumerir
 BOARD_HAVE_IR := true
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    libpowermanager.vendor
-
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
@@ -117,7 +113,18 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    libstdc++.vendor
+    android.hardware.power-V2-cpp.vendor \
+    android.frameworks.bufferhub@1.0.vendor_32 \
+    audioclient-types-aidl-cpp.vendor \
+    audioflinger-aidl-cpp.vendor \
+    audiopolicy-aidl-cpp.vendor \
+    av-types-aidl-cpp.vendor \
+    libandroid_runtime_lazy.vendor \
+    libaudioclient_aidl_conversion.vendor \
+    libaudiofoundation.vendor \
+    libstdc++.vendor \
+    mediametricsservice-aidl-cpp.vendor \
+    vndk-ext
 
 # Wifi
 PRODUCT_PACKAGES += \
