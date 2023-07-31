@@ -32,7 +32,10 @@ EXTRA_VENDOR_LIBRARIES_32 := \
     libselinux \
     libsonivox \
     libstagefright_foundation \
-    libpermission
+    libpermission \
+    lib-platform-compat-native-api \
+    packagemanager_aidl-cpp
+    
 
 EXTRA_VENDOR_LIBRARIES_64 := \
     libaudioclient \
@@ -40,5 +43,4 @@ EXTRA_VENDOR_LIBRARIES_64 := \
     libaudiopolicy \
     libmediametrics \
     libmediautils \
-    libnblog \
-    libpowermanager
+    libnblog
