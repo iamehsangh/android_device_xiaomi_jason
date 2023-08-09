@@ -8,29 +8,6 @@
 
 function blob_fixup() {
     case "${1}" in
-        vendor/lib/hw/camera.sdm660.so)
-            "${PATCHELF}" --replace-needed "libminikin.so" "libminikin-v28.so" "${2}"
-            "${PATCHELF}" --remove-needed "libgui.so" "${2}"
-            sed -i "s/service.bootanim.exit/service.bootanim.zzzz/g" "${2}"
-            ;;
-        vendor/lib/libarcsoft_beauty_shot.so)
-            "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
-            ;;
-        vendor/lib/libFaceGrade.so)
-            "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
-            ;;
-        vendor/lib/libicuuc-v28.so)
-            "${PATCHELF}" --set-soname "libicuuc-v28.so" "${2}"
-            ;;
-        vendor/lib/libminikin-v28.so)
-            "${PATCHELF}" --set-soname "libminikin-v28.so" "${2}"
-            "${PATCHELF}" --replace-needed "libicuuc.so" "libicuuc-v28.so" "${2}"
-            ;;
-        vendor/lib/libMiCameraHal.so)
-            "${PATCHELF}" --replace-needed "libicuuc.so" "libicuuc-v28.so" "${2}"
-            "${PATCHELF}" --replace-needed "libminikin.so" "libminikin-v28.so" "${2}"
-            grep -q "libpiex_shim.so" "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
-            ;;
         vendor/lib/libmmcamera2_stats_modules.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             "${PATCHELF}" --remove-needed "libgui.so" "${2}"
@@ -42,9 +19,6 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libgui.so" "${2}"
             ;;
         vendor/lib/libmpbase.so)
-            "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
-            ;;
-        vendor/lib/libVDClearShot.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             ;;
         vendor/lib64/libgf_hal.so)
