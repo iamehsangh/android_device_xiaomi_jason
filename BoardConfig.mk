@@ -31,6 +31,7 @@ TARGET_KERNEL_CONFIG := jason_defconfig
 
 # Camera
 BOARD_QTI_CAMERA_32BIT_ONLY := true
+$(call project-set-path,qcom-camera,$(DEVICE_PATH)/camera)
 
 # Display
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x00002000U

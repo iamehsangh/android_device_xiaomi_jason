@@ -49,6 +49,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.sdm660
+
 # Consumerir
 BOARD_HAVE_IR := true
 
@@ -109,17 +113,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    android.hardware.power-V2-cpp.vendor \
-    audioclient-types-aidl-cpp.vendor \
-    audioflinger-aidl-cpp.vendor \
-    audiopolicy-aidl-cpp.vendor \
-    av-types-aidl-cpp.vendor \
-    libandroid_runtime_lazy.vendor \
-    libaudioclient_aidl_conversion.vendor \
-    libaudiofoundation.vendor \
-    libstdc++.vendor \
-    mediametricsservice-aidl-cpp.vendor \
-    vndk-ext
+    libstdc++.vendor
 
 # Wifi
 PRODUCT_PACKAGES += \
