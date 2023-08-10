@@ -27,9 +27,7 @@ include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 DEVICE_PATH := device/xiaomi/jason
 
 # Kernel
-TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_KERNEL_CONFIG := jason_defconfig
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 
 # Camera
 BOARD_QTI_CAMERA_32BIT_ONLY := true
